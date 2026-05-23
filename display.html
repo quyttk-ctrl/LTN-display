@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Graduation Display</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      opacity: 0.7;
+    }
+
+    .name {
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .faculty {
+      font-size: 36px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="title">🎓 LỄ TỐT NGHIỆP</div>
+<div class="name" id="studentName">WAITING...</div>
+<div class="faculty" id="studentFaculty"></div>
+
+<script>
+const students = {
+  "SV001": {
+    name: "NGUYỄN VĂN A",
+    faculty: "Khoa Công nghệ thông tin"
+  },
+  "SV002": {
+    name: "TRẦN THỊ B",
+    faculty: "Ngành Ngôn ngữ Anh"
+  },
+  "SV003": {
+    name: "LÊ VĂN C",
+    faculty: "Khoa Điện tử"
+  }
+};
+
+function updateDisplay() {
+  const currentID = localStorage.getItem("currentStudent");
+</html>
