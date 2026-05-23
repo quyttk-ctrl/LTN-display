@@ -1,0 +1,30 @@
+const PRESENTATION_ID = "1Nl9W_x2c2ukW70HE2migxxsRcqPGk_FsqgbbGp_NqoY";
+
+const slides = {
+  "325008": "id.p",
+  "1581248": "id.g3e9ded37a00_0_0",
+  "1391414": "id.g3e9ded37a00_0_5"
+};
+
+function goToSlide(studentID){
+
+  if(slides[studentID]){
+
+    const url =
+`https://docs.google.com/presentation/d/${PRESENTATION_ID}/present#slide=${slides[studentID]}`;
+
+    document.getElementById("slidesFrame").src = url;
+  }
+}
+
+document
+.getElementById("scanner")
+.addEventListener("keypress", function(e){
+
+  if(e.key === "Enter"){
+
+    goToSlide(this.value.trim());
+
+    this.value = "";
+  }
+});
